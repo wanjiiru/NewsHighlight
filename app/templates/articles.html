@@ -1,23 +1,21 @@
 {% extends 'base.html' %} 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-md-12 heading">
+        <div class="col-md-12 ">
         </div>
     </div>
     <div class="row">
-        {% for article in news %}
-        <div class="col-md-3 articles-details">
-            <a href={{article.url}} target="_blank">
-                <img src={{article.urlToImage}} alt="IMAGE LOADING...">
-            </a>
-            <div class="words">
-                <h4 class="text-bold"> {{article.title}} </h4>
-                <p class="small">- {{article.author}} </p>
-                <p class="small">Posted on {{article.publishedAt}}</p>
+        {% for article_source in source_id %}
+        <div class="col-md-4">
+            <a href={{article.url}} target="_blank"> <img src={{article.urlToImage}}></a>
+            <div class="desc">
+                <h4> {{article.title}} </h4>
+                <p>- {{article.author}} </p>
+                <p>Posted on {{article.publishedAt}}</p>
                 <hr>
-                <p> {{article.description}}...
-                    <a href={{article.url}} target="_blank">Read More</a>
+                <p> {{article.description}}
+                <a href={{article.url}} target="_blank"> More</a>
                 </p>
             </div>
         </div>
