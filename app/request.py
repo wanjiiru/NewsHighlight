@@ -10,6 +10,7 @@ News=news.News
 Articles =  articles.Articles
 #getting the news base url
 base_url = app.config['ALL_NEWS_API_URL']
+articles_url = app.config ['ARTICLES_BASE_URL']
 
 
 def get_news(category):
@@ -64,13 +65,31 @@ def get_articles(source_id):
 
         articles_results = None
 
-        get_articles_response['articles']
-        articles_results = process_articles(get_articles_response['articles'])
+        if get_articles_response['articles']:
+            articles_results_list = get_articles_response(['articles'])
+            articles_results = process_results(articles_results_list)
+
     return articles_results
 
 
-def process_articles(this_articles):
-    
+def process_articles(articles_list):
+    '''
+    '''
+    articles_results = []
+    for article_item in articles_list:
+        title = article_item.get('title')
+        description = article_item.get('description')
+        urlToImage = article_item.get('urlToImage')
+        publishedAt = article_item.get('publishedAt')
+        author = article_item.get('author')
+        url = article_item.get('url')
+
+
+        if urlToImage:
+            article_object = Articles(title, description, urlToImage, publishedAt, author, url)
+            articles_results.append(article_object)
+
+
 
 
 

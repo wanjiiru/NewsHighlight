@@ -33,7 +33,7 @@ def news(id):
 
 
 
-@app.route('/articles<source_id)>')
+@app.route('/articles/<source_id>')
 def articles(source_id):
     '''
     function that returns articles by source id
