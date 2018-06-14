@@ -21,10 +21,12 @@ def index():
     return render_template('index.html', title= title, sports = all_news, general = general_news, technology = tech_news)
 
 # Views
-@app.route('/news/<int:news_id>')
-def news(news_id):
+@app.route('/news/<int:id>')
+def news(id):
     '''
     View movie page function that returns the movie details page and its data
     '''
+    news = get_news(id)
+
     
-    return render_template('index.html', id = news_id)
+    return render_template('index.html', news = news)
