@@ -1,5 +1,6 @@
 from flask import render_template
 from app import app
+from .request import get_news
 
 
 #views
@@ -13,4 +14,8 @@ def index():
     title = "News Mania"
 
 
-    return render_template('index.html', title= title)
+    all_news = get_news('all')
+    print(all_news)
+
+
+    return render_template('index.html', title= title, all = all_news)
