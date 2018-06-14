@@ -9,13 +9,22 @@ def index():
     '''
     view root page that returns the index page and its data
     '''
-
-
     title = "News Mania"
 
+    all_news = get_news('sports')
+    general_news = get_news('general')
+    tech_news = get_news('technology')
 
-    all_news = get_news('all')
-    print(all_news)
+    # print(all_news)
 
 
-    return render_template('index.html', title= title, all = all_news)
+    return render_template('index.html', title= title, sports = all_news, general = general_news, technology = tech_news)
+
+# Views
+@app.route('/news/<int:news_id>')
+def news(news_id):
+    '''
+    View movie page function that returns the movie details page and its data
+    '''
+    
+    return render_template('index.html', id = news_id)

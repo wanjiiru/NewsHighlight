@@ -2,7 +2,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    ALL_NEWS_API_URL = 'https://newsapi.org/v2/everything?sources=bbc-news,al-jazeera-english,cnn,independent,google-news,bloomberg,engadget,espn,fortune&sortBy=publishedAt&pageSize={}&apiKey={}'
+    ALL_NEWS_API_URL ='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
 
 
 
