@@ -1,11 +1,13 @@
 from app import app
 import urllib.request, json
-from . models import news
+from . models import news, articles
 
 #getting api key
 api_key = app.config['NEWS_API_KEY']
 
 News=news.News
+
+Articles =  articles.Articles
 #getting the news base url
 base_url = app.config['ALL_NEWS_API_URL']
 

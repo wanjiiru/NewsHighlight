@@ -9,4 +9,11 @@ class News:
         self.description = description
         self.country = country
         self.category = category
+
+
+
+
+
+
+
         
