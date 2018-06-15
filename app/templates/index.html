@@ -5,28 +5,28 @@
 
         <div class="container">
                 <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                                 <h1 style="color: #056b5b">Sports News</h1>
                                 <ul>
                                     {% for all_news in sports %}
                                     <li>{{all_news.name}}</li>        
-                                    <p> --{{all_news.description}} -- </p>
+                                    <p>{{all_news.description}}</p>
                                     <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
                                     {% endfor %}
                                 </ul>
                         </div>     
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                                 <h1 style="color: #056b5b">Tech News</h1>
                                 <ul>
                                     {% for all_news in technology %}
                                     <li style="color: #056b5b">{{all_news.name}}</li>
-                                    <p>{{all_news.description}} </p>
+                                    <p> {{all_news.description}} </p>
                                     <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
                                      {% endfor %}
                                 </ul>
                         </div>
         
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                                 <h1 style="color: #056b5b">General news</h1>
                                 <ul>
                                 {% for all_news in general %}
@@ -35,9 +35,31 @@
                                     <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
                                 {% endfor %}
                                 </ul>
-        
                         </div>
-                    </div>
+
+                        <div class="col-md-3">
+                                        <h1 style="color: #056b5b">Science News</h1>
+                                        <ul>
+                                            {% for all_news in science %}
+                                            <li style="color: #056b5b">{{all_news.name}}</li>
+                                            <p> {{all_news.description}} </p>
+                                            <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
+                                             {% endfor %}
+                                        </ul>
+                                        
+                        </div>
+
+                        <div class="col-md-3">
+                                        <h1 style="color: #056b5b">Entertainment News</h1>
+                                        <ul>
+                                            {% for all_news in business %}
+                                            <li style="color: #056b5b">{{all_news.name}}</li>
+                                            <p> {{all_news.description}} </p>
+                                            <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
+                                             {% endfor %}
+                                        </ul>
+                                        
+                        </div>
 
         </div>
         {%  endblock %}
