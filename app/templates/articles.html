@@ -5,15 +5,21 @@
 <div class="container-fluid">
     <div class="row">
         {% for article in news %}
-        <div class="col-md-4">
-            <a href={{article.url}}><img src={{article.urlToImage}}></a>
-            <div class="details">
-                <p> {{article.title}} </p>
-                <p>Posted on {{article.publishedAt}}</p>
-                <p>{{article.description}}<a href={{article.url}} target="_blank"> More</a>
-                </p>
+        <div class="col-md-3">
+                <div class="thumbnail">
+                    <a href="{{article.url}}" target="_blank">
+                        <img src="{{article.urlToImage}}" alt="{{article.title}}" class="img-responsive" styles="height:30px">
+                    </a>
+                    <div class="caption">
+                        <h4><a href="{{article.url}}" target="_blank">{{article.title |truncate(35)}}</a></h4>
+                        <p>{{article.description | truncate(100)}}</p>
+                        <a href="{{article.url}}" target="_blank"> Read Full article </a>
+                    </div>
+                    <div class="footer">
+                        Published at: {{article.date}}
+                    </div>
+                </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </div>

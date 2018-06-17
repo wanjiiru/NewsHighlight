@@ -1,77 +1,83 @@
-
         {% extends 'base.html' %}
         {% block content %}
 
 
 
-                <div class="jumbotron">
+                <div class="container-fluid">
                 <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                                <div class="sports">
-                                        <div class="title text-center"><h1>Sports news</h1></div>
-                                                <ul>
-                                                    {% for all_news in sports %}
-                                                    <li>{{all_news.name}}</li>        
-                                                    <div class="panel-body">
-                                                                <p>{{all_news.description | truncate(100)}}</p>
-                                                    </div>
-                                                    <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
-                                                    {% endfor %}
-                                                </ul>
-                                        </div> 
+                        <h1 style="text-align: center">Sports news</h1>
+                        <hr>
+                        {% for all_news in sports %}
+                        <div class="col-md-1">
+                                <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
+                                <p>{{all_news.description | truncate(100)}}</p>
+                                <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
+                        </div>
+
+                        {% endfor %}
+                </div>
+                <hr>
+
+                <div class="row">
+                        <h1 style="text-align: center">General news</h1><hr>
+                        {% for all_news in general %}
+                        <div class="col-md-1">
+                                <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
+                                <p>{{all_news.description | truncate(100)}}</p>
+                                <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
+                        </div>
+                        {% endfor %}
+                </div>
+                <hr>
 
 
-                                        <div class="col-md-12">
-                                                        <h1 style="color: #056b5b">Tech News</h1>
-                                                        <ul>
-                                                            {% for all_news in technology %}
-                                                            <li style="color: #056b5b">{{all_news.name}}</li>
-                                                            <p> {{all_news.description}} </p>
-                                                            <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
-                                                             {% endfor %}
-                                                        </ul>
-                                                </div>
-                                
-                                                <div class="col-md-12">
-                                                        <h1 style="color: #056b5b">General news</h1>
-                                                        <ul>
-                                                        {% for all_news in general %}
-                                                            <li>{{all_news.name}}</li>
-                                                            <p>{{all_news.description}}</p>
-                                                            <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
-                                                        {% endfor %}
-                                                        </ul>
-                                                </div>
-                        
-                                                <div class="col-md-12">
-                                                                <h1 style="color: #056b5b">Science News</h1>
-                                                                <ul>
-                                                                    {% for all_news in science %}
-                                                                    <li style="color: #056b5b">{{all_news.name}}</li>
-                                                                    <p> {{all_news.description}} </p>
-                                                                    <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
-                                                                     {% endfor %}
-                                                                </ul>
-                                                                
-                                                </div>
-                        
-                                                <div class="col-md-">
-                                                                <h1 style="color: #056b5b">Business News</h1>
-                                                                <ul>
-                                                                    {% for all_news in business %}
-                                                                    <li style="color: #056b5b">{{all_news.name}}</li>
-                                                                    <p> {{all_news.description}} </p>
-                                                                    <p><a href="/articles/{{ all_news.id}}">Read more</a></p>
-                                                                     {% endfor %}
-                                                                </ul>
-                                                                
-                                                </div>
-                        
+                <div class="row">
+                                <h1 style="text-align: center">Science news</h1><hr>
+                                {% for all_news in science %}
+                                <div class="col-md-1">
+                                        <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
+                                        <p>{{all_news.description | truncate(100)}}</p>
+                                        <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
+                                </div>
+                                {% endfor %}
+                </div>
+                <hr>
+
+
+                <div class="row">
+                                <h1 style="text-align: center">Tech news</h1><hr>
+                                {% for all_news in technology %}
+                                <div class="col-md-1">
+                                        <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
+                                        <p>{{all_news.description | truncate(100)}}</p>
+                                        <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
+                                </div>
+                                {% endfor %}
+                </div>
+                <hr>
+
+                <div class="row">
+                                <h1 style="text-align: center">Business news</h1><hr>
+                                {% for all_news in business %}
+                                <div class="col-md-1">
+                                        <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
+                                        <p>{{all_news.description | truncate(100)}}</p>
+                                        <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
+                                </div>
+                                {% endfor %}
+                </div>
+                <hr>
+
+
+
+
+
 
                 </div>
-                            
-                       
-        </div>
+
+
+
+                                      
         {%  endblock %}
 
    
