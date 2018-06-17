@@ -5,10 +5,10 @@
 <div class="container-fluid">
     <div class="row">
         {% for article in news %}
-        <div class="col-md-3">
+        <div class="col-md-4">
                 <div class="thumbnail">
                     <a href="{{article.url}}" target="_blank">
-                        <img src="{{article.urlToImage}}" alt="{{article.title}}" class="img-responsive" styles="height:30px">
+                        <img src="{{article.urlToImage}}" alt="{{article.title}}" class="img-responsive" style="height:30px">
                     </a>
                     <div class="caption">
                         <h4><a href="{{article.url}}" target="_blank">{{article.title |truncate(35)}}</a></h4>

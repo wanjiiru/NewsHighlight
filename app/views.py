@@ -9,7 +9,7 @@ def index():
     '''
     view root page that returns the index page and its data
     '''
-    title = "Welcome to the best news point"
+    title = "Home || News Sources"
 
     all_news = get_news('sports')
     general_news = get_news('general')
