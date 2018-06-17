@@ -5,75 +5,20 @@
 
                 <div class="container-fluid">
                 <div class="row">
-                        <h1 style="text-align: center">Sports news</h1>
-                        <hr>
-                        {% for all_news in sports %}
-                        <div class="col-md-1">
-                                <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
-                                <p>{{all_news.description | truncate(100)}}</p>
-                                <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
+                {% for all_news in general %}
+                <div class="col-md-2">
+                        <div class="thumbnail">
+                                <div class="details">
+                                        <h4>{{all_news.name}}</a></h4>
+                                        <p>{{all_news.description | truncate(100)}}</p>
+                                        <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
+                                </div>
                         </div>
-
-                        {% endfor %}
+                 </div>
+                 {% endfor %}
+                </div>
                 </div>
                 <hr>
-
-                <div class="row">
-                        <h1 style="text-align: center">General news</h1><hr>
-                        {% for all_news in general %}
-                        <div class="col-md-1">
-                                <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
-                                <p>{{all_news.description | truncate(100)}}</p>
-                                <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
-                        </div>
-                        {% endfor %}
-                </div>
-                <hr>
-
-
-                <div class="row">
-                                <h1 style="text-align: center">Science news</h1><hr>
-                                {% for all_news in science %}
-                                <div class="col-md-1">
-                                        <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
-                                        <p>{{all_news.description | truncate(100)}}</p>
-                                        <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
-                                </div>
-                                {% endfor %}
-                </div>
-                <hr>
-
-
-                <div class="row">
-                                <h1 style="text-align: center">Tech news</h1><hr>
-                                {% for all_news in technology %}
-                                <div class="col-md-1">
-                                        <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
-                                        <p>{{all_news.description | truncate(100)}}</p>
-                                        <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
-                                </div>
-                                {% endfor %}
-                </div>
-                <hr>
-
-                <div class="row">
-                                <h1 style="text-align: center">Business news</h1><hr>
-                                {% for all_news in business %}
-                                <div class="col-md-1">
-                                        <h4 style="color: #056b5b ">{{ all_news.name}}</h4>
-                                        <p>{{all_news.description | truncate(100)}}</p>
-                                        <p><a href="/articles/{{ all_news.id}}">Visit source</a></p>
-                                </div>
-                                {% endfor %}
-                </div>
-                <hr>
-
-
-
-
-
-
-                </div>
 
 
 
