@@ -42,7 +42,9 @@ def articles(source_id):
     function that returns articles by source id
     '''
 
-    article_source = get_articles(source_id)
+
+
+    article_source = get_articles(source_id)    
     title = f'{source_id}| Articles'
     return render_template('articles.html',title = title, name = source_id, news = article_source )
 
