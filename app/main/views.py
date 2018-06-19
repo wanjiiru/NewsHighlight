@@ -1,10 +1,10 @@
-from flask import render_template
-from app import app
-from .request import get_news, get_articles
+from flask import render_template, request, redirect, url_for
+from . import main
+from ..request import get_articles, get_news
 
 
 #views
-@app.route('/')
+@main.route('/')
 def index():
     '''
     view root page that returns the index page and its data
@@ -24,7 +24,7 @@ def index():
     return render_template('index.html', title= title, sports = all_news, general = general_news, technology = tech_news, business = bus_news, science = sci_news)
 
 # Views
-@app.route('/news/<int:id>')
+@main.route('/news/<int:id>')
 def news(id):
     '''
     View movie page function that returns the movie details page and its data
@@ -36,15 +36,13 @@ def news(id):
 
 
 
-@app.route('/articles/<source_id>')
+@main.route('/articles/<source_id>')
 def articles(source_id):
     '''
     function that returns articles by source id
     '''
 
-
-
-    article_source = get_articles(source_id)    
+    article_source = get_articles(source_id)
     title = f'{source_id}| Articles'
     return render_template('articles.html',title = title, name = source_id, news = article_source )
 
