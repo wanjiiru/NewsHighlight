@@ -17,7 +17,7 @@ News Highlight is a web application that allows the user to view news highlights
     - Run ./start.py
 
 ## Known bugs
-No known errors if found drop a message on my profile
+No known bugs so far
 
 ## Technologies used
     - Python 3.6
