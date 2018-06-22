@@ -1,4 +1,4 @@
-# [NewsHighlight](https://newshighlightliz.herokuapp.com/)news 
+# [NewsHighlight](https://newshighlightliz.herokuapp.com/)
 ## News Highlight is a web application that lists and previews news articles from various sources.
 ### June 15, 2018
 #### Author **Wanjiru Nganga**
